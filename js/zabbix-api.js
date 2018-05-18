@@ -280,9 +280,9 @@ function showResult(response,url,https_flag){
 				}else if( itemname == "triggerid"){
 					var pageurl = "";
 					if( https_flag ){
-						pageurl = "https://" + url + "/events.php?triggerid=" + response.result[index][itemname];
+						pageurl = "https://" + url + "/zabbix.php?action=problem.view&filter_triggerids%5B%5D=" + response.result[index][itemname]+"&filter_set=1";
 					}else{
-						pageurl = "http://" + url + "/events.php?triggerid=" + response.result[index][itemname];
+						pageurl = "http://" + url + "/zabbix.php?action=problem.view&filter_triggerids%5B%5D=" + response.result[index][itemname]+"&filter_set=1";
 					}
 				}else if( itemname == "priority"){
                     var priority = response.result[index][itemname];
